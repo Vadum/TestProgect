@@ -4,3 +4,6 @@ D:\3 Курс\1 Семестр\Технології створ. програм. 
 D:\3 Курс\1 Семестр\Технології створ. програм. продуктів\Готові\Ghjuhfv\Hello Word\Hello Word\obj\Debug\Hello Word.csprojResolveAssemblyReference.cache
 D:\3 Курс\1 Семестр\Технології створ. програм. продуктів\Готові\Ghjuhfv\Hello Word\Hello Word\obj\Debug\Hello Word.exe
 D:\3 Курс\1 Семестр\Технології створ. програм. продуктів\Готові\Ghjuhfv\Hello Word\Hello Word\obj\Debug\Hello Word.pdb
+C:\Users\user\Desktop\TestProgect\TestProgect\Active Breanche\Hello Word\Hello Word\Hello Word\bin\Debug\Hello Word.exe.config
+C:\Users\user\Desktop\TestProgect\TestProgect\Active Breanche\Hello Word\Hello Word\Hello Word\obj\Debug\Hello Word.exe
+C:\Users\user\Desktop\TestProgect\TestProgect\Active Breanche\Hello Word\Hello Word\Hello Word\obj\Debug\Hello Word.pdb
