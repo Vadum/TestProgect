@@ -1,0 +1,106 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.IO;
+using System.Threading.Tasks;
+
+namespace zav2
+{
+    public class Pocops
+    {
+        public int Kode { get; set; }
+        public string Name { get; set; }
+        public string Street { get; set; }
+        public int Years { get; set; }
+        public Pocops(int kode = 0, string name = "", string street = "", int year = 0)
+        {
+            Name = name;
+            Kode = kode;
+            Street = street;
+            Years = year;
+        }
+        public override string ToString()
+        {
+            return $"Код : {Kode}, Прізвище : {Name}, Вулиця : {Street}, Рік народження : {Years}";
+        }
+
+    }
+
+    public class Magazins
+    {
+        public int Kode { get; set; }
+        public string Name { get; set; }
+        public int Znizka { get; set; }
+        public Magazins(int kode = 0, string name = "", int znizka = 0)
+        {
+            Name = name;
+            Kode = kode;
+            Znizka = znizka;
+        }
+        public override string ToString()
+        {
+            return $"Код : {Kode}, Прізвище : {Name},  Знижка : {Znizka}";
+        }
+
+    }
+
+    static class Program
+    {
+        static void Main()
+        {
+            All my = new All();
+            my.Fileread("Pocops.txt");
+            my.Print();
+            Console.WriteLine();
+
+            All my1 = new All();
+            my1.Fileread1("Magazine.txt");
+            my1.Print();
+            Console.WriteLine();
+        }
+    }
+
+    public class All
+    {
+        public List<Pocops> data = new List<Pocops>();
+        public void Fileread(string file)
+        {
+            string[] lines = File.ReadAllLines(file); //стрінговий масив
+
+            for (int i = 0; i < lines.Length; ++i)
+            {
+                string[] first = lines[i].Split(' ');
+                data.Add(new Pocops(Convert.ToInt32(first[0]), first[1], first[2], Convert.ToInt32(first[3])));
+            }
+        }
+
+        public void Print()
+        {
+            foreach (var i in data)
+            {
+                Console.WriteLine(i.ToString());
+            }
+        }
+
+        public List<Magazins> data1 = new List<Magazins>();
+        public void Fileread1(string file)
+        {
+            string[] lines1 = File.ReadAllLines(file); //стрінговий масив
+
+            for (int i = 0; i < lines1.Length; ++i)
+            {
+                string[] first = lines1[i].Split(' ');
+                data1.Add(new Pocops(Convert.ToInt32(first[0]), first[1], Convert.ToInt32(first[2])));
+            }
+        }
+
+        public void Print()
+        {
+            foreach (var i in data1)
+            {
+                Console.WriteLine(i.ToString());
+            }
+        }
+
+    }
+}
